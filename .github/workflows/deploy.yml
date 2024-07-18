@@ -20,7 +20,7 @@ jobs:
 
     - name: Deploy to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@your-ec2-public-ip 'bash -s' << 'EOF'
+        ssh -o StrictHostKeyChecking=no ubuntu@ec2-35-86-77-169.us-west-2.compute.amazonaws.com 'bash -s' << 'EOF'
           cd test-django
           git pull origin main
           docker-compose down
