@@ -1,0 +1,14 @@
+<!-- templates/create_review.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Leave a Review{% endblock %}
+
+{% block content %}
+<h2>Leave a Review for {{ property.address }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Submit Review</button>
+</form>
+{% endblock %}
