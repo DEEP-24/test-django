@@ -21,7 +21,7 @@ jobs:
     - name: Deploy to EC2
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@your-ec2-public-ip 'bash -s' << 'EOF'
-          cd /path/to/your/app
+          cd test-django
           git pull origin main
           docker-compose down
           docker-compose up --build -d
